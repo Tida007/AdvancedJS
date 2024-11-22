@@ -49,3 +49,39 @@ console.log(hasBannana);
 
 let hasWatermelon = fruits.includes("Watermelon");
 console.log(hasWatermelon);
+
+
+// Assigment
+
+// To concatenate two arrays in JavaScript using the concat method
+// Create Two (2) Arrays
+const property1 = ["BeachHouse", "Creed Avenue"];
+const currency = ["$8900", "$2500"];
+
+// Use the concat(); method to combine the arrays
+const value = property1.concat(currency);
+
+// Using map(); method to iterate over each item 
+value.map(checkOutValue => console.log(checkOutValue));
+
+// sort the combined array in ascending order using the sort(); method, with a custom comparison function
+value.sort((a, b) => a - b);
+console.log(value)
+
+// finally reverse the sorted array using the reverse(); method
+const reversedValue = value.reverse();
+reversedValue.forEach(checkOutValue => console.log(checkOutValue));
+
+
+// Array containing object data
+const userInfo = [
+    { id: 1, name: 'Tony', state: 'Los Angeles' },
+    { id: 2, name: 'kadijah', state: 'Lagos' },
+    { id: 3, name: 'william', state: 'Compton' },
+    { id: 4, name: 'Percy', state: 'Detriot' },
+    { id: 5, name: 'Melody', state: 'New Jersy' },
+    { id: 6, name: 'Tmg', state: 'Chicago' }
+];
+
+// using map() method, to iterate through each object in the array to extract and display each data
+userInfo.map(user => console.log(`userID: ${user.id}, Name: ${user.name}, State: ${user.state}`));
