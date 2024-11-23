@@ -60,6 +60,7 @@ const currency = ["$8900", "$2500"];
 
 // Use the concat(); method to combine the arrays
 const value = property1.concat(currency);
+console.log(value);
 
 // Using map(); method to iterate over each item 
 value.map(checkOutValue => console.log(checkOutValue));

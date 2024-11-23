@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Tida Vscode/pyramid"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AdvancedJS",
+		"liveServer.settings.port": 5501
+	}
+}
