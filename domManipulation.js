@@ -29,7 +29,7 @@ function changeText() {
     document.getElementById("demo").innerHTML = "Test running programm";
 }
 
-// Function to create a new button dynamically
+// Function to create a new button (dynamically)
 function createResetButton() {
     if (document.getElementById('reset-btn')) {
         return;
@@ -62,3 +62,42 @@ function resetToDefault() {
     }
 }  
 
+
+// Setting text Content..
+const story = document.querySelector(".story");
+
+const setText = document.body.querySelector("#set-text");
+setText.addEventListener("click", () => {
+    story.textContent = "It was a dark and stormy night...";
+});
+
+// clear the text Content.
+const clearText = document.body.querySelector("#clear-text");
+clearText.addEventListener("click", () => {
+    story.textContent = "";
+});
+
+
+// Adding a child element
+const parent = document.body.querySelector(".parent"); //access the <div> and button
+
+const addChild = document.body.querySelector("#add-child");
+addChild.addEventListener("click", () => {
+    parent.textContent = "still test running programm..";
+
+    if (parent.childNodes.length > 1) {
+        return;
+    }
+
+    const child = document.createElement("div"); // create element
+    child.classList.add("child");
+    child.textContent = "JavaScript Dom..";
+    parent.appendChild(child); // to add the child
+});
+
+// To remove the child element when clicked
+const removeChild = document.body.querySelector("#remove-child");
+removeChild.addEventListener("click", () => {
+    const child = document.body.querySelector(".child");
+    parent.removeChild(child);
+});
