@@ -101,3 +101,7 @@ removeChild.addEventListener("click", () => {
     const child = document.body.querySelector(".child");
     parent.removeChild(child);
 });
+
+const title = document.querrySelector(".title");
+title.textContent = "New Title";
+title.s
