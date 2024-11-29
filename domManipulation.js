@@ -102,6 +102,11 @@ removeChild.addEventListener("click", () => {
     parent.removeChild(child);
 });
 
-const title = document.querrySelector(".title");
-title.textContent = "New Title";
-title.s
+
+const title = document.querySelector(".title");
+title.textContent = "DOM Manipulation";
+title.style.color = "blue";
+
+const newElement = document.createElement("div"); // create element
+newElement.textContent = "second Title";
+document.body.appendChild(newElement); // to add the child
