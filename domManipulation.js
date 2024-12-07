@@ -62,7 +62,7 @@ function resetToDefault() {
     }
 }  
 
-
+// Mozilla tryout
 // Setting text Content..
 const story = document.querySelector(".story");
 
@@ -103,6 +103,7 @@ removeChild.addEventListener("click", () => {
 });
 
 
+
 const title = document.querySelector(".title");
 title.textContent = "DOM Manipulation";
 title.style.color = "blue";
@@ -110,3 +111,35 @@ title.style.color = "blue";
 const newElement = document.createElement("div"); // create element
 newElement.textContent = "second Title";
 document.body.appendChild(newElement); // to add the child
+
+
+// DOM API..
+// Reading & Modifying the DOM
+// suppose author wants to change h2 header--> and write more paragrahs..the following script does the job:
+
+function change() {
+    // document.getEelementByTagname('h2') returns a NodeList of (h2)
+    // element in the document, and the first is number 0:
+    const header = document.getElementsByTagName('h2').item(0); // get the first h2 element
+
+    // The firstChild of the header is a Text node:
+    header.firstChild.data = "A dynamic document";
+
+    // NOW header is "A dynamic document"
+
+    // Access the pagraph in the document:
+    const para = document.getElementsById('college').item(0);
+    para.firstChild.data = "Test 123"; // change the text of the first paragraph
+
+    // Create a new Text node for the second paragraph:
+    const para2 = document.createTextNode("Test 456"); // create a new text node
+
+    // Create a new Element for the second paragraph:
+    const para3 = document.createElement('p'); // create a new element
+
+    // Append the new text node to the second paragraph:
+    para3.appendChild(para2);
+
+    // Append the paragraph of the document to the body (which is the parent of para):
+    para.parentNode.appendChild(para3);
+}
