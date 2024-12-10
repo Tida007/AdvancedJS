@@ -43,3 +43,36 @@ const move = document.getElementById("myList2").lastElementChild;
 
 document.getElementById("myList1").appendChild(move); //   append it to the first list//
 
+// Traversing an HTML table with JS & DOM interfaces.
+// creating an HTML table dynamicaaly
+
+function generateTable() {
+    // 1. Create a <table> element and a <tbody> element
+    const tbl = document.createElement("table");
+    const tblBody = document.createElement("tbody");
+
+    // creating all cells
+    for (let i = 0; i < 2; i++) {
+        // create a table row
+        const row = document.createElement("tr");
+        
+        for (let j = 0; j < 2; j++) {
+            // Create a <td> element and a text node, make the text node the content of the <td> element, and put the <td> at the end of the table row.
+
+            const cell = document.createElement("td");
+            const cellText = document.createElement('cell in row ${i}, column ${j}'); // replace with actual text
+            cell.appendChild(cellText); // append the text node to the <td> element
+            row.appendChild(cell); // append the <td> to the table row
+        }
+
+        // add the row to the end of the table body
+        tblBody.appendChild(row); // append the <tr> to the <tbody> element
+    }
+
+    // put the <tbody> in the table
+    tbl.appendChild(tblBody); // append the <tbody> to the <table> element
+
+    document.body.appendChild(tbl); // append the <table> into the <body>
+    // sets the border attribute of tbl to '2'
+    tbl.setAttribute("border", "2");
+}

@@ -2,24 +2,23 @@
 const fruits = ["Apple", "Orange", "Bananna", "Coconut"];
 console.log(fruits);
 
-// adding with push
-fruits.push("Cherry")
+fruits.push("Cherry"); // adds to the end of the array
 console.log(fruits);
 
 
-fruits.unshift("Mango");
+fruits.unshift("Mango"); // adds to the beginning of the array
 console.log(fruits);
 
-fruits.pop();
+fruits.pop();  // removes the last element
 console.log(fruits);
 
-fruits.shift();
+fruits.shift(); // removes the first element
 console.log(fruits);
 
-fruits.splice(1, 1);
+fruits.splice(1, 1); // removes the element at index 1
 console.log(fruits);
 
-fruits[1] = "Blueberry";
+fruits[1] = "Blueberry"; // changes the element at index 1
 console.log(fruits);
 
 fruits.splice(1, 0, "strawberry", "watermelon");
